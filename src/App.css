@@ -1,0 +1,73 @@
+.background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/Background.png") no-repeat center center;
+    background-size: cover !important;
+}
+
+.background.dark {
+    opacity: 0.3;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button {
+    text-align: center;
+    outline: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    padding: 0.2em;
+    margin: 0.2em;
+    transition: 200ms color;
+}
+
+.start-button:hover {
+    color: grey;
+}
+
+.pause-music {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0.5em 1em;
+}
+
+.present {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.present p {
+    font-size: 1.3em;
+    margin: 0.5em;
+    max-width: 800px;
+    line-height: 1.5em;
+}
+
+.present img {
+    margin: 1em;
+}

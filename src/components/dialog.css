@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Rodin Bokutoh Pro EB";
+    src: url("/FOT-RodinBokutoh Pro EB.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Seurat Pro B";
+    src: url("/FOT-Seurat Pro B.otf") format("opentype");
+}
+
+.dialog {
+    position: fixed;
+    box-sizing: border-box;
+    font-family: "Rodin Bokutoh Pro EB", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 20px 50px;
+    bottom: 30px;
+    left: 50%;
+    width: 700px;
+    height: 200px;
+    background: url("/dialog-bg.png") no-repeat center center;
+    background-size: contain;
+    color: #74664b;
+    text-align: left;
+    animation: appear 0.3s ease-out forwards;
+}
+
+.name-plate {
+    font-family: "Seurat Pro B", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 5em;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    color: #4b1500;
+    background-color: #de842e;
+    border-radius: 1em;
+    transform: translate(40px, -10px) rotate(-3deg);
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 0.7em;
+    margin: 0;
+}
+
+.finish-marker {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top: 20px solid #f8be00;
+    animation: bob 1s ease-in-out infinite;
+}
+
+@keyframes bob {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
